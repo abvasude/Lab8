@@ -20,9 +20,9 @@ If we run our puppeteer tests with the field 'headless' to be true, then I expec
 
 2. What would your beforeAll callback look like if you wanted to start from the settings page before every test case?
 
-beforeAll(async () => {
-    await page.goto('http://127.0.0.1:5500');
-    const [response] = await Promise.all([
-      page.waitForNavigation(500),
-      page.click('header > img'),
+beforeAll(async () => {     
+    await page.goto('http://127.0.0.1:5500');    
+    const [response] = await Promise.all([   
+      page.waitForNavigation(500),     
+      page.click('header > img'),     
     ]);
